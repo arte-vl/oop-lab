@@ -12,7 +12,7 @@ class Protein{
         void get_name(string&);
         void get_allilouxia(string&);
         void describe();
-
+	void length_al();
     private:
         string id, name, allilouxia;
         
@@ -46,6 +46,7 @@ int main() {
     p1.set_name("PTEN");
     p1.set_allilouxia("MNAAATARATLL");
     p1.describe();
+    p1.length_al();
 
     Gene g1;
     g1.set_id("ENSG1234");
@@ -86,9 +87,11 @@ void Protein::get_allilouxia(string& al) {
 
 void Protein::describe() {
     cout << "protein " << name << "  " << allilouxia << "\n";
-    return;
 }
 
+void Protein::length_al(){
+   cout << "The length of protein chain is: " << allilouxia.length() << "\n";
+}
 
 void Gene::set_id(string i_d) {
     id=i_d;
